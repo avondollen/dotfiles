@@ -106,7 +106,7 @@ return {
                     lualine_c = {
                       '%=', --[[ add your center compoentnts here in place of this comment ]]
                     },
-                    lualine_x = {},
+                    lualine_x = { },
                     lualine_y = { 'filetype', 'progress' },
                     lualine_z = {
                         { 'location', separator = { right = '' }, left_padding = 2 },
@@ -127,8 +127,8 @@ return {
                     'man',
                     'mason',
                     'neo-tree',
+                    'trouble',
                     -- 'toggleterm',
-                    -- 'trouble',
                     -- 'nvim-dap-ui',
                 },
             }

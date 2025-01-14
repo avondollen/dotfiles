@@ -7,4 +7,4 @@ vim.cmd("set shiftwidth=2")
 
 -- Set Color Scheme
 -- Possible Options are: 'tokyonight', 'catppuccin'
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme catppuccin")
