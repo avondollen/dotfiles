@@ -13,7 +13,7 @@
 -----                   -----
 --- Mason Package Manager ---
 -----                   -----
-local mpm = {"williamboman/mason.nvim"}
+local mpm = {"williamboman/mason.nvim", version='v1.*'}
 
 mpm.lazy = false
 

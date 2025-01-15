@@ -39,7 +39,6 @@ Plugin.opts = {
 	"luap",
 	"markdown",
 	"markdown_inline",
-	"printf",
 	"python",
 	"query",
 	"regex",
