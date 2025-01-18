@@ -156,9 +156,13 @@ return {
                       ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false } },
                     }
                 },
-                follow_current_file = {
+                filesystem = {
+                  use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
+                                                  -- instead of relying on nvim autocmd events.
+                  follow_current_file = {
                     enabled = true, -- This will find and focus the file in the active buffer every time
                                     -- the current file is changed while the tree is open.
+                  }
                 }
             })
         end
