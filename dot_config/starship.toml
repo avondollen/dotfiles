@@ -60,9 +60,9 @@ modified = ' 󰷉 ${count}'
 renamed = '  ${count}'
 untracked = '  ${count}'
 staged = '  ${count}'
-ahead = '⇡${count}'
+ahead = ' ⇡${count}'
 behind = ' ⇣${count}'
-diverged = '⇡${ahead_count}:⇣${behind_count}'
+diverged = ' ⇡${ahead_count}:⇣${behind_count}'
 
 [git_branch]
 format = "[ ](fg:directory bg:background)[$branch](bg:background)[](fg:background)"
