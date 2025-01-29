@@ -39,7 +39,6 @@ function Plugin.init()
     signs = true,
     float = {
       border = 'rounded',
-      source = 'always',
     },
   })
 
@@ -105,6 +104,15 @@ function Plugin.config()
     --       }
     --     })
     --   end,
+      ['clangd'] = function()
+        lspconfig.clangd.setup({
+          capabilities = lsp_capabilities,
+          cmd = { 'clangd', '--background-index', '--clang-tidy' },
+          init_options = {
+            compilationDatabasePath = "./build",
+          },
+        })
+      end,
       ['lua_ls'] = function()
         require('plugins.lsp-servers.lua_ls')
       end
