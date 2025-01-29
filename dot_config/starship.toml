@@ -8,6 +8,7 @@ palette = "catppuccin_mocha"
 
 format = """
 [╭](fg:separator)\
+$container\
 $os\
 $directory\
 $git_status\
@@ -71,20 +72,23 @@ crust = "#11111b"
 [os.symbols]
 Ubuntu = "󰕈 "
 Linux = " "
-# Docker = ""
 
 ###########################################
 
 [os]
-format = "[─](fg:separator)[](fg:directory)[$symbol](fg:icon bg:directory)[](fg:directory)"
+format = "[─](fg:separator)[](fg:directory)[$symbol](fg:icon bg:directory)[](fg:directory bg:background)[ $name $version](bg:background)[](fg:background)"
 disabled = false
+
+# Docker = ""
+[container]
+format = "[─](fg:separator)[](fg:directory)[ ](fg:icon bg:directory)[](fg:directory bg:background)[ $name](bg:background)[](fg:background)"
 
 [character]
 success_symbol = "[❯](fg:prompt_ok)"
 error_symbol = "[❯](fg:prompt_err)"
 
 [directory]
-format = "[─](fg:separator)[](fg:directory)[ ](fg:icon bg:directory)[](fg:directory bg:background)[ $path](bg:background)[](fg:background)"
+format = "[─](fg:separator)[](fg:directory)[ ](fg:icon bg:directory)[](fg:directory bg:background)[ $path](bg:background)[](fg:background)"
 truncate_to_repo = true
 truncation_length = 1
 truncation_symbol = './'
