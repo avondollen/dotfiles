@@ -13,6 +13,7 @@ return {
         -- python = { "pylint" },
         dockerfile = { "hadolint" },
         cpp = { "clangtidy", "cppcheck" },
+        sh = { "shellcheck" },
         -- cmake = { "cmakelang" },
       }
   
