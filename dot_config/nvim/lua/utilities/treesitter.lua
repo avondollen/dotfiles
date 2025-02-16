@@ -13,47 +13,45 @@
 --------------------------------------------------------
 
 return {
-    {
-        'nvim-treesitter/nvim-treesitter',
-        version='v0.9.*',
+   'nvim-treesitter/nvim-treesitter',
+   version='v0.9.*',
 
-        config = function () 
-            require('nvim-treesitter.configs').setup({
+   config = function ()
+     require('nvim-treesitter.configs').setup({
 
-                auto_install = true,
+       auto_install = true,
 
-                highlight = {
-                    enable = true,
-                },
+       highlight = {
+         enable = true,
+       },
 
-             	ensure_installed = {
-             	  "bash",
-             	  "c",
-             	  "cpp",
-             	  "diff",
-             	  "dockerfile",
-             	  "html",
-             	  "javascript",
-             	  "jsdoc",
-             	  "json",
-             	  "jsonc",
-             	  "lua",
-             	  "luadoc",
-             	  "luap",
-             	  "markdown",
-             	  "markdown_inline",
-             	  "python",
-             	  "query",
-             	  "regex",
-             	  "toml",
-             	  "tsx",
-             	  "typescript",
-             	  "vim",
-             	  "vimdoc",
-             	  "xml",
-             	  "yaml"
-             	},
-            })
-		end
-    }
+       ensure_installed = {
+         "bash",
+         "c",
+         "cpp",
+         "diff",
+         "dockerfile",
+         "html",
+         "javascript",
+         "jsdoc",
+         "json",
+         "jsonc",
+         "lua",
+         "luadoc",
+         "luap",
+         "markdown",
+         "markdown_inline",
+         "python",
+         "query",
+         "regex",
+         "toml",
+         "tsx",
+         "typescript",
+         "vim",
+         "vimdoc",
+         "xml",
+         "yaml"
+      },
+    })
+  end
 }
