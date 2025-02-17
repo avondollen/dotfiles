@@ -16,19 +16,51 @@
 -----                   -----
 --- Mason Package Manager ---
 -----                   -----
-local mpm = {"williamboman/mason.nvim", version='v1.*'}
+return {
 
-mpm.lazy = false
+  'williamboman/mason.nvim',
+  version='v1.*',
 
-mpm.opts = {
-    ui = {
-        border = 'rounded',
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
+  dependencies = {
+    {'WhoIsSethDaniel/mason-tool-installer.nvim'},
+  },
+
+  config = function()
+    require('mason').setup({
+
+      ui = {
+          border = 'rounded',
+          icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗"
+          }
+      }
+    })
+
+    require('mason-tool-installer').setup({
+
+      ensure_installed = {
+
+        -- LSP Servers
+        "bashls",
+        "clangd",
+        "docker_compose_language_service",
+        "dockerls",
+        "lua_ls",
+
+        -- Linters
+        "cpplint",
+        "hadolint",
+        "shellcheck",
+
+        -- DAP Servers
+
+        -- Formatters
+        "clang-format",
+
+      }
+    })
+
+  end
 }
-
-return mpm

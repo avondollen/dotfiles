@@ -25,15 +25,9 @@ mason_lsp_config.opts = {
   -----                 -----
   ---   Install Servers   ---
   -----                 -----
-  ensure_installed = {
+  -- LSP Server ensure_installed list is located in
+  -- mason-package-manager.lua, installed via mason-tool-installer.
 
-    -- LSP Servers
-    "bashls",
-    "clangd",
-    "docker_compose_language_service",
-    "dockerls",
-    "lua_ls",
-  },
   -----                  -----
   ---   LSP Capabilities   ---
   -----                  -----
